@@ -1,4 +1,6 @@
-﻿using System.Diagnostics;
+﻿using System.ComponentModel.Design;
+using System.Diagnostics;
+using System.Net.Http.Headers;
 
 internal class EulerProject11
 {
@@ -49,6 +51,9 @@ internal class EulerProject11
                                                     { 20,73,35,29,78,31,90,01,74,31,49,71,48,86,81,16,23,57,05,54 } ,
                                                     { 01,70,54,71,83,51,54,69,16,92,33,48,61,43,52,01,89,19,67,48 } };
 
+    static int[] factors = new int[4];
+    static int[] solutionIndices = new int[2];
+
 
     static void Main()
     {
@@ -56,12 +61,125 @@ internal class EulerProject11
         Console.WriteLine(separator);
         Stopwatch sw = Stopwatch.StartNew();
 
+        int greatestProduct = 0;
 
+        ParseColumns(ref greatestProduct);
+        ParseRows(ref greatestProduct);
+        ParseDiagonalRight(ref greatestProduct);
+        ParseDiagonalLeft(ref greatestProduct);
 
 
         sw.Stop();
         Console.WriteLine("Elapsed: " + sw.ElapsedMilliseconds + "ms");
-        Console.WriteLine("Result: ");
+        Console.WriteLine("Solution indices for starting factor: row-" + solutionIndices[0] + ", column-" + solutionIndices[1]);
+        Console.WriteLine("Factors: " + factors[0] + "," + factors[1] + "," + factors[2] + "," + factors[3]);
+        Console.WriteLine("Result: " + greatestProduct);
         Console.ReadLine();
     }
+
+    private static void ParseDiagonalLeft(ref int greatestProduct)
+    {
+        int product = 0;
+
+        for (int col = 3; col < data.GetLength(0); col++)
+        {
+            for (int row = 0; row < data.GetLength(1) - 5; row++)
+            {
+                product = data[row, col] * data[row + 1, col - 1] * data[row + 2, col - 2] * data[row + 3, col - 3];
+
+                if (product > greatestProduct)
+                {
+                    factors[0] = data[row, col];
+                    factors[1] = data[row + 1, col - 1];
+                    factors[2] = data[row + 2, col - 2];
+                    factors[3] = data[row + 3, col - 3];
+
+                    solutionIndices[0] = row + 1;
+                    solutionIndices[1] = col + 1;
+
+                    greatestProduct = product;
+                }
+            }
+        }
+    }
+
+    private static void ParseDiagonalRight(ref int greatestProduct)
+    {
+        int product = 0;
+
+        for (int col = 0; col < data.GetLength(0) - 5; col++)
+        {
+            for (int row = 0; row < data.GetLength(1) - 5; row++)
+            {
+                product = data[row, col] * data[row + 1, col + 1] * data[row + 2, col + 2] * data[row + 3, col + 3];
+
+                if (product > greatestProduct)
+                {
+                    factors[0] = data[row, col];
+                    factors[1] = data[row + 1, col + 1];
+                    factors[2] = data[row + 2, col + 2];
+                    factors[3] = data[row + 3, col + 3];
+
+                    solutionIndices[0] = row + 1;
+                    solutionIndices[1] = col + 1;
+
+                    greatestProduct = product;
+                }
+            }
+        }
+    }
+
+    private static void ParseRows(ref int greatestProduct)
+    {
+        int product = 0;
+
+        for (int col = 0; col < data.GetLength(0) - 5; col++)
+        {
+            for (int row = 0; row < data.GetLength(1); row++)
+            {
+                product = data[row, col] * data[row, col + 1] * data[row, col + 2] * data[row, col + 3];
+
+                if (product > greatestProduct)
+                {
+                    factors[0] = data[row, col];
+                    factors[1] = data[row, col + 1];
+                    factors[2] = data[row, col + 2];
+                    factors[3] = data[row, col + 3];
+
+                    solutionIndices[0] = row + 1;
+                    solutionIndices[1] = col + 1;
+
+                    greatestProduct = product;
+                }
+            }
+        }
+    }
+
+    private static void ParseColumns(ref int greatestProduct)
+    {
+        int product = 0;
+
+        for (int col = 0; col < data.GetLength(0); col++) 
+        {
+            for (int row = 0; row < data.GetLength(1) - 5; row++)
+            {
+                product = data[row, col] * data[row + 1, col] * data[row + 2, col] * data[row + 3, col];
+
+                if (product > greatestProduct)
+                {
+                    factors[0] = data[row, col];
+                    factors[1] = data[row + 1, col];
+                    factors[2] = data[row + 2, col];
+                    factors[3] = data[row + 3, col];
+                    
+                    solutionIndices[0] = row + 1;
+                    solutionIndices[1] = col + 1;
+
+                    greatestProduct = product;
+                }
+            }
+        }
+    }
+
+
 }
