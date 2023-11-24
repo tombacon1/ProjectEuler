@@ -31,8 +31,6 @@ internal class EulerProject8
             numDivisors = factors.Count;
         }
 
-
-
         sw.Stop();
 
         factors.Sort();

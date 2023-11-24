@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectEuler - 09", "Projec
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectEuler - 12", "ProjectEuler - 12\ProjectEuler - 12.csproj", "{BF4A90FF-8787-4331-BECF-FB472404EF1B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectEuler - 13", "ProjectEuler - 13\ProjectEuler - 13.csproj", "{860940F9-8426-40BE-9E81-73802A3159C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{BF4A90FF-8787-4331-BECF-FB472404EF1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF4A90FF-8787-4331-BECF-FB472404EF1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF4A90FF-8787-4331-BECF-FB472404EF1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{860940F9-8426-40BE-9E81-73802A3159C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{860940F9-8426-40BE-9E81-73802A3159C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{860940F9-8426-40BE-9E81-73802A3159C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{860940F9-8426-40BE-9E81-73802A3159C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
