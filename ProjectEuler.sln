@@ -25,11 +25,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectEuler - 08", "Projec
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectEuler - 09", "ProjectEuler - 09\ProjectEuler - 09.csproj", "{B4D65DAB-83B9-4C2C-A334-4B5ED986FD9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectEuler - 12", "ProjectEuler - 12\ProjectEuler - 12.csproj", "{BF4A90FF-8787-4331-BECF-FB472404EF1B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectEuler - 12", "ProjectEuler - 12\ProjectEuler - 12.csproj", "{BF4A90FF-8787-4331-BECF-FB472404EF1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectEuler - 13", "ProjectEuler - 13\ProjectEuler - 13.csproj", "{860940F9-8426-40BE-9E81-73802A3159C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectEuler - 13", "ProjectEuler - 13\ProjectEuler - 13.csproj", "{860940F9-8426-40BE-9E81-73802A3159C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectEuler - 14", "ProjectEuler - 14\ProjectEuler - 14.csproj", "{BE85A087-A414-49A2-84BC-3E04E6BBCF7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectEuler - 14", "ProjectEuler - 14\ProjectEuler - 14.csproj", "{BE85A087-A414-49A2-84BC-3E04E6BBCF7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectEuler - 15", "ProjectEuler - 15\ProjectEuler - 15.csproj", "{81E81705-21DB-408A-8853-EEBDA26EE46A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,10 @@ Global
 		{BE85A087-A414-49A2-84BC-3E04E6BBCF7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE85A087-A414-49A2-84BC-3E04E6BBCF7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE85A087-A414-49A2-84BC-3E04E6BBCF7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81E81705-21DB-408A-8853-EEBDA26EE46A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81E81705-21DB-408A-8853-EEBDA26EE46A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81E81705-21DB-408A-8853-EEBDA26EE46A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81E81705-21DB-408A-8853-EEBDA26EE46A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
