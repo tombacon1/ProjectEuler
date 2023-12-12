@@ -23,12 +23,12 @@ internal class EulerProject21
         {
             int b, n;
             
-            List<int> divisors = GetDivisors(a);
+            List<int> divisors = GetProperDivisors(a);
             b = SumList(divisors);
 
             if (b <= a) continue;
             
-            divisors = GetDivisors(b);
+            divisors = GetProperDivisors(b);
             n = SumList(divisors);
 
             if (n == a) sum += a + b;
@@ -48,7 +48,7 @@ internal class EulerProject21
         return sum;
     }
 
-    static List<int> GetDivisors(int n)
+    static List<int> GetProperDivisors(int n)
     {
         List<int> divisors = new List<int>();
 
