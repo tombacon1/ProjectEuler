@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 
 internal class EulerProject21
 {
@@ -10,19 +11,59 @@ internal class EulerProject21
         "Evaluate the sum of all the amicable numbers under 10000.";
     static readonly string separator = new string('-', 50) + "\r\n";
 
-
     static void Main()
     {
         Console.WriteLine(question);
         Console.WriteLine(separator);
         Stopwatch sw = Stopwatch.StartNew();
 
+        int sum = 0;
 
+        for (int a = 1; a < 10000; a++)
+        {
+            int b, n;
+            
+            List<int> divisors = GetDivisors(a);
+            b = SumList(divisors);
 
+            if (b <= a) continue;
+            
+            divisors = GetDivisors(b);
+            n = SumList(divisors);
+
+            if (n == a) sum += a + b;
+        }
 
         sw.Stop();
         Console.WriteLine("Elapsed: " + sw.ElapsedMilliseconds + "ms");
-        Console.WriteLine("Result: ");
+        Console.WriteLine("Result: " + sum);
         Console.ReadLine();
+    }
+
+    private static int SumList(List<int> divisors)
+    {
+        int sum = 0;
+        foreach (int divisor in divisors)
+            sum += divisor;
+        return sum;
+    }
+
+    static List<int> GetDivisors(int n)
+    {
+        List<int> divisors = new List<int>();
+
+        for (int i = 1; i * i <= n; i++)
+        {
+            if (n % i == 0)
+            {
+                divisors.Add(i);
+                if(i > 1 && i * i < n)
+                    divisors.Add(n / i);
+            }
+        }
+        
+        divisors.Sort();
+        
+        return divisors;
     }
 }
