@@ -41,15 +41,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectEuler - 18", "Projec
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectEuler - 19", "ProjectEuler - 19\ProjectEuler - 19.csproj", "{9A7BD7F0-7A3C-4585-8E5E-DAD7DAF842ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectEuler - 20", "ProjectEuler - 20\ProjectEuler - 20.csproj", "{9F41F68F-06CE-45A6-8F4D-0038CB173BD1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectEuler - 20", "ProjectEuler - 20\ProjectEuler - 20.csproj", "{9F41F68F-06CE-45A6-8F4D-0038CB173BD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectEuler - 21", "ProjectEuler - 21\ProjectEuler - 21.csproj", "{454A3B5F-D8B5-4C52-8C38-AAEBB557D4BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectEuler - 21", "ProjectEuler - 21\ProjectEuler - 21.csproj", "{454A3B5F-D8B5-4C52-8C38-AAEBB557D4BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectEuler - 22", "ProjectEuler - 22\ProjectEuler - 22.csproj", "{617CCE3E-C12F-4AA6-BCA2-5446308CAFEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectEuler - 22", "ProjectEuler - 22\ProjectEuler - 22.csproj", "{617CCE3E-C12F-4AA6-BCA2-5446308CAFEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectEuler - 23", "ProjectEuler - 23\ProjectEuler - 23.csproj", "{D67CD95D-BE06-45B0-BC5A-92BF1D2C7ED9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectEuler - 23", "ProjectEuler - 23\ProjectEuler - 23.csproj", "{D67CD95D-BE06-45B0-BC5A-92BF1D2C7ED9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectEuler - 24", "ProjectEuler - 24\ProjectEuler - 24.csproj", "{2EA7C60C-1D28-4014-B7CE-305F52B6BB9C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectEuler - 24", "ProjectEuler - 24\ProjectEuler - 24.csproj", "{2EA7C60C-1D28-4014-B7CE-305F52B6BB9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectEuler - 25", "ProjectEuler - 25\ProjectEuler - 25.csproj", "{80510415-918C-4C43-8463-F1C1A79F1CB9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -153,6 +155,10 @@ Global
 		{2EA7C60C-1D28-4014-B7CE-305F52B6BB9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2EA7C60C-1D28-4014-B7CE-305F52B6BB9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2EA7C60C-1D28-4014-B7CE-305F52B6BB9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80510415-918C-4C43-8463-F1C1A79F1CB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80510415-918C-4C43-8463-F1C1A79F1CB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80510415-918C-4C43-8463-F1C1A79F1CB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80510415-918C-4C43-8463-F1C1A79F1CB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
