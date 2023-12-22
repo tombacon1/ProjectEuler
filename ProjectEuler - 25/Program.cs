@@ -1,6 +1,5 @@
 ﻿using System.Diagnostics;
 using System.Numerics;
-using System.Runtime.CompilerServices;
 
 internal class EulerProject25
 {
@@ -46,13 +45,6 @@ internal class EulerProject25
             CurrentFibNumber = 1; 
             PreviousFibNumber = 1;
             Index = 2;
-        }
-
-        public Fibonacci(BigInteger currentFibNumber, BigInteger previousFibNumber, int indexOfCurrent)
-        {
-            CurrentFibNumber = currentFibNumber;
-            PreviousFibNumber = previousFibNumber;
-            Index = indexOfCurrent;
         }
 
         public void Next() 
