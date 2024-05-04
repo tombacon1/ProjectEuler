@@ -57,6 +57,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectEuler - 26", "Projec
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectEuler - 27", "ProjectEuler - 27\ProjectEuler - 27.csproj", "{6FAEB17D-D085-443B-9346-64673621DF5D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1B71AA7C-B7FB-4B01-8478-A2B36280EF68}"
+	ProjectSection(SolutionItems) = preProject
+		project_euler_problems.txt = project_euler_problems.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

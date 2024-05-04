@@ -29,7 +29,7 @@ internal class EulerProject27
         Console.WriteLine(separator);
         Stopwatch sw = Stopwatch.StartNew();
 
-        List<Results> results = new List<Results>();
+        List<Result> results = new List<Result>();
         List<int> primesToOneThousand = new List<int>();
 
         for (int i = 0; i <= 1000; i++)
@@ -41,10 +41,10 @@ internal class EulerProject27
         for (int a = -999; a < 1000; a++)
             foreach (int b in primesToOneThousand)
             {
-                results.Add(new Results { a = a, b = b, count = CountQuadraticPrimes(a, b) });
+                results.Add(new Result { a = a, b = b, count = CountQuadraticPrimes(a, b) });
             }
 
-        Results result = results.MaxBy(r => r.count);
+        Result result = results.MaxBy(r => r.count);
 
         int product = result.a * result.b;
 
@@ -88,7 +88,7 @@ internal class EulerProject27
         return true;
     }
 
-    public struct Results
+    public struct Result
     {
         public int a { get; set; }
         public int b { get; set; }
