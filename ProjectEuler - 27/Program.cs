@@ -1,5 +1,4 @@
-﻿using System.Data;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
 internal class EulerProject27
 {
@@ -22,6 +21,12 @@ internal class EulerProject27
     static readonly string separator = new string('-', 50) + "\r\n";
     static readonly string tab = new string(' ', 4);
 
+    public struct Result
+    {
+        public int a { get; set; }
+        public int b { get; set; }
+        public int count { get; set; }
+    }
 
     static void Main()
     {
@@ -86,12 +91,5 @@ internal class EulerProject27
         }
 
         return true;
-    }
-
-    public struct Result
-    {
-        public int a { get; set; }
-        public int b { get; set; }
-        public int count { get; set; }
     }
 }
