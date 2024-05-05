@@ -35,7 +35,7 @@ internal class EulerProject28
         int index = 1;
         while (gap <= size - 1)
         {
-            for(int j = 0; j < 4; j++)
+            for(int i = 0; i < 4; i++)
             {
                 index += gap;
                 sum += index;
