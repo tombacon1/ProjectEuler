@@ -21,12 +21,11 @@ internal class EulerProject30
         Stopwatch sw = Stopwatch.StartNew();
 
         int exp = 5;
-        int maxDigitPowered = (int)Math.Pow(9, exp);
+        int result = 0;
 
+        int maxDigitPowered = (int)Math.Pow(9, exp);
         int lowerBound = (int)Math.Pow(2, exp);
         int upperBound = maxDigitPowered.ToString().Length * maxDigitPowered;
-
-        int result = 0;
 
         int[] powers = new int[10];
 

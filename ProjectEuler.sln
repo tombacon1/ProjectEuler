@@ -55,18 +55,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectEuler - 25", "Projec
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectEuler - 26", "ProjectEuler - 26\ProjectEuler - 26.csproj", "{E67E9AED-89D4-44FA-BE11-064030F3891A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectEuler - 27", "ProjectEuler - 27\ProjectEuler - 27.csproj", "{6FAEB17D-D085-443B-9346-64673621DF5D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectEuler - 27", "ProjectEuler - 27\ProjectEuler - 27.csproj", "{6FAEB17D-D085-443B-9346-64673621DF5D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1B71AA7C-B7FB-4B01-8478-A2B36280EF68}"
 	ProjectSection(SolutionItems) = preProject
 		project_euler_problems.txt = project_euler_problems.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectEuler - 28", "ProjectEuler - 28\ProjectEuler - 28.csproj", "{C647B9DE-9F21-497A-AB83-C229BA31DE61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectEuler - 28", "ProjectEuler - 28\ProjectEuler - 28.csproj", "{C647B9DE-9F21-497A-AB83-C229BA31DE61}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectEuler - 29", "ProjectEuler - 29\ProjectEuler - 29.csproj", "{7A831D0B-E330-48B6-95AA-B5D86C8E90EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectEuler - 29", "ProjectEuler - 29\ProjectEuler - 29.csproj", "{7A831D0B-E330-48B6-95AA-B5D86C8E90EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectEuler - 30", "ProjectEuler - 3\ProjectEuler - 30.csproj", "{F82BB119-6159-49E3-8A34-B28F14F833E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectEuler - 30", "ProjectEuler - 30\ProjectEuler - 30.csproj", "{306C1FC8-C33F-4B41-B201-2C503D0E33A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -190,10 +190,10 @@ Global
 		{7A831D0B-E330-48B6-95AA-B5D86C8E90EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A831D0B-E330-48B6-95AA-B5D86C8E90EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A831D0B-E330-48B6-95AA-B5D86C8E90EB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F82BB119-6159-49E3-8A34-B28F14F833E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F82BB119-6159-49E3-8A34-B28F14F833E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F82BB119-6159-49E3-8A34-B28F14F833E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F82BB119-6159-49E3-8A34-B28F14F833E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{306C1FC8-C33F-4B41-B201-2C503D0E33A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{306C1FC8-C33F-4B41-B201-2C503D0E33A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{306C1FC8-C33F-4B41-B201-2C503D0E33A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{306C1FC8-C33F-4B41-B201-2C503D0E33A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
