@@ -1,6 +1,4 @@
-﻿using System;
-using System.Diagnostics;
-using System.Security.Cryptography.X509Certificates;
+﻿using System.Diagnostics;
 
 internal class EulerProject31
 {
@@ -38,11 +36,9 @@ internal class EulerProject31
 
     private static void CountCombinationsRecursive(ref int count, int prevValueIndex, int target)
     {
-        // overshot target
         if (target < 0)
             return;
 
-        // hit target value
         if (target == 0)
         {
             count++;
