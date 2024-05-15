@@ -1,5 +1,4 @@
 ﻿using System.Diagnostics;
-using System.Net;
 
 internal class EulerProject32
 {
@@ -14,6 +13,8 @@ internal class EulerProject32
         "  only include it once in your sum.";
     static readonly string separator = new string('-', 50) + "\r\n";
 
+    const string SORTED_DIGITS = "123456789";
+
 
     static void Main()
     {
@@ -21,84 +22,49 @@ internal class EulerProject32
         Console.WriteLine(separator);
         Stopwatch sw = Stopwatch.StartNew();
 
-        FindPanDigitalIdentities();
+        HashSet<int> products = FindPanDigitalProducts();
+
+        int sum = 0;
+        foreach (int product in products) { sum+= product; }
 
         sw.Stop();
         Console.WriteLine("Elapsed: " + sw.ElapsedMilliseconds + "ms");
-        Console.WriteLine("Result: ");
+        Console.WriteLine("Result: " + sum);
         Console.ReadLine();
     }
 
-    private static void FindPanDigitalIdentities()
+    private static HashSet<int> FindPanDigitalProducts()
     {
-        int[] digits = new int[9];
-        List<int[]> digitArrays = new List<int[]>();
+        HashSet<int> panDigitalProducts = new HashSet<int>();
 
-        PopulateDigitArrayRecursive(0, digits, 0, ref digitArrays);
-
-
-        //for(int i = 1; )
+        for (int n = 1234; n <= 9876; n++)
+            if (HasUniqueDigits(n))
+                for (int i = 1; i * i < n; i++)
+                {
+                    if (n % i == 0 && IsPanDigital(i, n / i, n))
+                        panDigitalProducts.Add(n);
+                }
+        return panDigitalProducts;
     }
 
-    private static void PopulateDigitArrayRecursive(int curDigit, int[] digits, int count, ref List<int[]> digitArrays)
+    static bool IsPanDigital(int multiplicand, int multiplier, int product)
     {
-        if (count == 9)
-        {
-            digitArrays.Add(digits);
-            string s = String.Empty;
-            foreach(int digit in digits)
-                s+= digit.ToString();
-            
-            Console.WriteLine(s);
-            return;
-        }
+        string digits = multiplicand.ToString() + multiplier.ToString() + product.ToString();
 
-        
-        if (!digits.Contains(curDigit))
-        {
-            digits[count] = curDigit;
-            count++;
-        }
-        for (int i = 1; i <= 9; i++)
-            PopulateDigitArrayRecursive(i, digits, count, ref digitArrays);
+        if (digits.Length != 9)
+            return false;
+
+        char[] digitsCharArray = digits.ToCharArray();
+        Array.Sort(digitsCharArray);
+
+        return new String(digitsCharArray).Equals(SORTED_DIGITS);
+
     }
 
-    static bool IsPanDigital(int multiplicand, int multiplier)
+    private static bool HasUniqueDigits(int n)
     {
-        int product = multiplicand * multiplier;
-
-        char[] chars =  ConcatenateIntegersToCharArray(new int[3] { multiplicand, multiplier, product });
-
-        for (int i = 1; i < 10; i++)
-        {
-            if (!chars.Contains((char)i))
-                return false;
-        }
-
-        return true;
-    }
-
-    static char[] ConcatenateIntegersToCharArray(int[] input)
-    {
-        string s = String.Empty;
-        
-        for(int i = 0; i < input.Length; i++)
-            s += input[i].ToString();
-
-        return s.ToCharArray();
-    }
-
-
-    static int[] IntToDigitArray(int n)
-    {
-        Stack<int> digits = new Stack<int>();
-
-        while(n != 0)
-        {
-            int d = n % 10;
-            digits.Push(d);
-            n /= 10;
-        }
-        return digits.ToArray();
+        char[] chars = Convert.ToString(n).ToCharArray();
+        HashSet<char> set = new HashSet<char>(chars);
+        return set.Count == chars.Length;
     }
 }
