@@ -1,6 +1,4 @@
 ﻿using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography;
 
 internal class EulerProject33
 {
