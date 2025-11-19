@@ -37,7 +37,10 @@ internal class EulerProject32
     {
         HashSet<int> panDigitalProducts = new HashSet<int>();
 
-        for (int n = 1234; n <= 9876; n++)
+        const int MAX_PRODUCT = 9876;
+        const int MIN_PRODUCT = 1234;
+
+        for (int n = MIN_PRODUCT; n <= MAX_PRODUCT; n++)
             if (HasUniqueDigits(n))
                 for (int i = 1; i * i < n; i++)
                 {

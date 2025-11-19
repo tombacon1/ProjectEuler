@@ -68,9 +68,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectEuler - 29", "Projec
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectEuler - 30", "ProjectEuler - 30\ProjectEuler - 30.csproj", "{306C1FC8-C33F-4B41-B201-2C503D0E33A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectEuler - 31", "ProjectEuler - 31\ProjectEuler - 31.csproj", "{5818AD7D-943F-4EAA-8CFE-C753EFD98B5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectEuler - 31", "ProjectEuler - 31\ProjectEuler - 31.csproj", "{5818AD7D-943F-4EAA-8CFE-C753EFD98B5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectEuler - 32", "ProjectEuler - 32\ProjectEuler - 32.csproj", "{EB1E422C-3A7D-4C76-9CEE-84F11F09EF5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectEuler - 32", "ProjectEuler - 32\ProjectEuler - 32.csproj", "{EB1E422C-3A7D-4C76-9CEE-84F11F09EF5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectEuler - 33", "ProjectEuler - 33\ProjectEuler - 33.csproj", "{7782E103-A3AD-4476-9606-7F6FD8B9C8B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -206,6 +208,10 @@ Global
 		{EB1E422C-3A7D-4C76-9CEE-84F11F09EF5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB1E422C-3A7D-4C76-9CEE-84F11F09EF5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB1E422C-3A7D-4C76-9CEE-84F11F09EF5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7782E103-A3AD-4476-9606-7F6FD8B9C8B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7782E103-A3AD-4476-9606-7F6FD8B9C8B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7782E103-A3AD-4476-9606-7F6FD8B9C8B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7782E103-A3AD-4476-9606-7F6FD8B9C8B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
