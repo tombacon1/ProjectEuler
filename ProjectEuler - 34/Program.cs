@@ -1,8 +1,4 @@
 ﻿using System.Diagnostics;
-using System.Globalization;
-using System.Net;
-using System.Numerics;
-using System.Runtime.InteropServices;
 
 internal class EulerProject34
 {
