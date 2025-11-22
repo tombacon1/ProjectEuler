@@ -22,8 +22,6 @@ internal class EulerProject33
         public int Numerator { get; set; }
         public int Denominator { get; set; }
 
-        public double Decimal { get { return (double)Numerator / (double)Denominator; } }
-
         public Fraction(int numerator, int denominator)
         {
             Numerator = numerator;
@@ -47,17 +45,11 @@ internal class EulerProject33
             return a;
         }
 
-        public double AsDecimal()
-        {
-            return AsDecimal(this);
-        }
-        public static double AsDecimal(int numerator, int denominator) => (double)numerator / (double)denominator;
-        public static double AsDecimal(Fraction fraction) => Fraction.AsDecimal(fraction.Numerator, fraction.Denominator);
+        public double AsDecimal() => AsDecimal(this);
 
-        public bool IsEqualTo(Fraction fraction)
-        {
-            return AsDecimal().Equals(fraction.AsDecimal());
-        }
+        public static double AsDecimal(int numerator, int denominator) => (double)numerator / (double)denominator;
+        public static double AsDecimal(Fraction fraction) => AsDecimal(fraction.Numerator, fraction.Denominator);
+               
     }
 
     static void Main()
@@ -86,26 +78,15 @@ internal class EulerProject33
                 num_digits[0] = GetDigitFromInt(numerator, 0);
                 num_digits[1] = GetDigitFromInt(numerator, 1);
 
-                if (num_digits[0] == den_digits[0])
-                {
-                    if (Fraction.AsDecimal(num_digits[1], den_digits[1]) == Fraction.AsDecimal(numerator, denominator))
-                        curious_fractions.Add(new Fraction(num_digits[1], den_digits[1]));
-                }
-                if (num_digits[0] == den_digits[1])
-                {
-                    if (Fraction.AsDecimal(num_digits[1], den_digits[0]) == Fraction.AsDecimal(numerator, denominator))
-                        curious_fractions.Add(new Fraction(num_digits[1], den_digits[0]));
-                }
-                if (num_digits[1] == den_digits[0])
-                {
-                    if (Fraction.AsDecimal(num_digits[0], den_digits[1]) == Fraction.AsDecimal(numerator, denominator))
-                        curious_fractions.Add(new Fraction(num_digits[0], den_digits[1]));
-                }
-                if (num_digits[1] == den_digits[1])
-                {
-                    if (Fraction.AsDecimal(num_digits[0], den_digits[0]) == Fraction.AsDecimal(numerator, denominator))
-                        curious_fractions.Add(new Fraction(num_digits[0], den_digits[0]));
-                }
+                for(int i = 0; i <=1 ; i++)
+                    for(int j = 0; j <= 1; j++)
+                    {
+                        if (num_digits[i] == den_digits[j])
+                        {
+                            if (Fraction.AsDecimal(num_digits[1 - i], den_digits[1 - j]).Equals(Fraction.AsDecimal(numerator, denominator)))
+                                curious_fractions.Add(new Fraction(num_digits[1-i], den_digits[1-j]));
+                        }
+                    }
             }
         }
 
@@ -118,7 +99,6 @@ internal class EulerProject33
         }
 
         Fraction simplified_fraction = Fraction.Simplify(products);
-
 
         sw.Stop();
         Console.WriteLine("Elapsed: " + sw.ElapsedMilliseconds + "ms");
