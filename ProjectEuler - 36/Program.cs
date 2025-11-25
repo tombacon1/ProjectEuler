@@ -1,8 +1,4 @@
-﻿using System.Collections.Immutable;
-using System.Diagnostics;
-using System.Diagnostics.CodeAnalysis;
-using System.Reflection.Metadata.Ecma335;
-using System.Text;
+﻿using System.Diagnostics;
 
 internal class EulerProject36
 {
