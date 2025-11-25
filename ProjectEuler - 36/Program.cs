@@ -56,7 +56,7 @@ internal class EulerProject36
 
                 palindromes.Add(int.Parse(palindrome));
 
-                if (IsEven(palindrome.Length) && palindrome.Length > 3)
+                if (palindrome.Length > 3)
                 {
                     string palindromeOdd = palindrome.Remove(palindrome.Length / 2, 1);
                     palindromes.Add(int.Parse(palindromeOdd));
@@ -65,8 +65,6 @@ internal class EulerProject36
 
             return palindromes;
         }
-
-        private static bool IsEven(int n) => n % 2 == 0;
 
         private static string IntToBinaryString(int n) => Convert.ToString(n, 2);
 
