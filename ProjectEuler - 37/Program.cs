@@ -23,6 +23,7 @@ internal class EulerProject37
         Console.WriteLine("Result: " + result);
         Console.ReadLine();
     }
+
     internal static class Solution
     {
         internal static int Solve()
@@ -84,7 +85,6 @@ internal class EulerProject37
 
             return n - (leftDigit * multiplier);
         }
-
 
         static bool IsPrime(int n)
         {
