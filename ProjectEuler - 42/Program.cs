@@ -68,8 +68,8 @@ internal class EulerProject42
             int sum = 0;
             foreach(char c in word)
             {
-                int ascii_code = (int)c - 64;
-                sum += ascii_code;
+                int alphaPosition = (int)c - 64;
+                sum += alphaPosition;
             }
 
             return sum;
