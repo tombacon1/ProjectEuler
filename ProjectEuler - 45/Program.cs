@@ -29,42 +29,29 @@ internal class EulerProject45
     {
         internal static ulong Solve()
         {
-            ulong n = 285;
+            ulong n = 286;
             ulong t = GetTriangleNumber(n);
+
             HashSet<ulong> pentagonalNumbers = new HashSet<ulong>();
             HashSet<ulong> hexagonalNumbers = new HashSet<ulong>();
 
-            for (ulong i = 1; i <= 2000000; i++)
+            for (ulong i = 1; i <= 1500000; i++)
             {
                 pentagonalNumbers.Add(GetPentagonalNumber(i));
                 hexagonalNumbers.Add(GetHexagonalNumber(i));
             }
 
-            while (true)
-            {
-                n++;
-                t = GetTriangleNumber(n);
-                if (pentagonalNumbers.Contains(t) && hexagonalNumbers.Contains(t))
-                    break;
-            }
+            while (!(pentagonalNumbers.Contains(t) && hexagonalNumbers.Contains(t)))
+                t = GetTriangleNumber(++n);
 
             return t;
         }
 
-        private static ulong GetTriangleNumber(ulong n)
-        {
-            return n * (n + 1) / 2;
-        }
+        private static ulong GetTriangleNumber(ulong n) => n * (n + 1) / 2;
         
-        private static ulong GetPentagonalNumber(ulong n)
-        {
-            return n * (3 * n - 1) / 2;
-        }
+        private static ulong GetPentagonalNumber(ulong n) => n * (3 * n - 1) / 2;
 
-        private static ulong GetHexagonalNumber(ulong n)
-        {
-            return n * (2 * n - 1);
-        }
+        private static ulong GetHexagonalNumber(ulong n) => n * (2 * n - 1);
     }
 }
 
