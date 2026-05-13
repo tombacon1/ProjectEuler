@@ -16,7 +16,7 @@ internal class EulerProject46
     static readonly string separator = new string('-', 50) + "\r\n";
 
     static int _n = 1;
-    static int _p = 2;
+    static int _p = 2;  // start with next prime after 2 to ensure odd composite numbers
     static List<int> Primes = new List<int>();
 
     static void Main()
@@ -39,7 +39,6 @@ internal class EulerProject46
         {
             while(true)
             {
-                
                 _n = GetNextOddComposite();
                 while(_p < _n)
                 {
