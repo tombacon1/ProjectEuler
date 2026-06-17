@@ -29,30 +29,46 @@ internal class EulerProject50
 
     private static class Solution
     {
+        const int ONE_MILLION = 1000000;
+
         internal static int Solve()
         {
-            List<int> primes = GetPrimes(2, 1000000);
+            int[] primes = GetPrimes(2, ONE_MILLION);
             
+            int longestSum = 0;
+            int largestPrime = 0;
+            
+            for(int i = 0; i < primes.Length; i++)
+            {
+                int sum = 0;
+                int j = i;
+                while(sum < ONE_MILLION && j < primes.Length)
+                {
+                    sum += primes[j];
+                    if(j - i + 1 > longestSum && IsPrime(sum))
+                    {
+                        longestSum = j - i + 1;
+                        largestPrime = sum;
+                    }
 
-            
-            
+                    j++;
+                }
+            }
 
-            return 0;
+            return largestPrime;
         }
 
-        internal static List<int> GetPrimes(int lower, int upper)
+        internal static int[] GetPrimes(int lower, int upper)
         {
             List<int> primes = new List<int>();
 
             for(int i = lower; i <= upper; i++)
             {
                 if(IsPrime(i))
-                {
                     primes.Add(i);
-                }
             }
 
-            return primes;
+            return primes.ToArray<int>();
         }
 
         internal static bool IsPrime(int n)
