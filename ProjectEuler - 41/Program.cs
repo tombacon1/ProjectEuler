@@ -26,7 +26,6 @@ internal class EulerProject41
         internal static int Solve()
         {
             int solution = 0;
-            List<int> permutations = new List<int>();
             for (int length = 9; length >= 1; length--)
             {
                 int[] digits = GetPandigitalDigits(length);
